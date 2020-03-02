@@ -54,6 +54,7 @@ The following tables lists the configurable parameters of the logging-operator c
 | `nameOverride`                                      | Override name of app                                   | ``                             |
 | `fullnameOverride`                                  | Override full name of app                              | ``                             |
 | `namespaceOverride`                                 | Override namespace of app                              | ``                             |
+| `labels`                                            | Define labels for logging-operator deployment           | `{}`                           |
 | `watchNamespace`                                    | Namespace to watch for LoggingOperator CRD             | ``                             |
 | `rbac.enabled`                                      | Create rbac service account and roles                  | `true`                         |
 | `rbac.psp.enabled`                                  | Must be used with `rbac.enabled` true. If true, creates & uses RBAC resources required in the cluster with [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) enabled.              | `false`                        |
@@ -62,6 +63,7 @@ The following tables lists the configurable parameters of the logging-operator c
 | `tolerations`                                       | Node Tolerations                                       | `[]`                           |
 | `nodeSelector`                                      | Define which Nodes the Pods are scheduled on.          | `{}`                           |
 | `annotations`                                       | Define annotations for logging-operator pods           | `{}`                           |
+| `podLabels`                                         | Define labels for logging-operator pods          | `{}`                           |
 | `podSecurityContext`                                | Pod SecurityContext for Logging operator. [More info](https://kubernetes.io/docs/concepts/policy/security-context/)                                                                                             | `{"runAsNonRoot": true, "runAsUser": 1000, "fsGroup": 2000}` |
 | `securityContext`                                   | Container SecurityContext for Logging operator. [More info](https://kubernetes.io/docs/concepts/policy/security-context/) | `{"allowPrivilegeEscalation": false, "readOnlyRootFilesystem": true}` |
 | `createCustomResource`                              | Create CRDs. | `true` |

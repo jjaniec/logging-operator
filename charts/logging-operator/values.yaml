@@ -16,6 +16,8 @@ namespaceOverride: ""
 
 annotations: {}
 
+podLabels: {}
+
 ## Deploy CRDs used by Logging Operator.
 ##
 createCustomResource: true
